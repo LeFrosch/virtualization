@@ -1,0 +1,7 @@
+# CLion files
+.idea/
+
+# make build outputs
+build/
+test
+main
