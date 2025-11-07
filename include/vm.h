@@ -18,3 +18,6 @@ typedef struct {
 
 /// Default implementation of the VM.
 vm_state_t vm_exec_default(program_t program);
+
+/// Threaded implementation of the VM.
+vm_state_t vm_exec_threaded(program_t program);

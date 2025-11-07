@@ -1,6 +1,6 @@
 CC          := clang
 FORMAT      := clang-format
-CFLAGS	    := -Wall -Wextra -Wpedantic -Wconversion -Werror -std=c23 -O3 -Iinclude
+CFLAGS	    := -Wall -Wextra -Wpedantic -Wconversion -Werror -std=gnu23 -O3 -Iinclude -Wno-gnu-label-as-value
 DEBUG_FLAGS := -g -DDEBUG -O0
 
 UNAME := $(shell uname -s)

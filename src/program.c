@@ -37,7 +37,8 @@ int program_generate(program_t* out, const uint32_t size, const uint8_t probabil
     out->initial_reg_a = rand() & 7;
     out->initial_reg_l = rand() & 7;
 
-    for (uint32_t i = 0; i < size; i++) {
+    uint32_t i = 0;
+    while (i < size) {
         const opcode_t opc = opcode_random(prefix_sums);
         if (opc == OP_BACK7) {
             if (i < 7) {
@@ -55,7 +56,7 @@ int program_generate(program_t* out, const uint32_t size, const uint8_t probabil
             }
         }
 
-        buf[i] = opc;
+        buf[i++] = opc;
     }
 
     buf[size - 1] = OP_HALT;
